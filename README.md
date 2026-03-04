@@ -47,7 +47,7 @@ Riders were behaviorally segmented to distinguish:
 
 ## Insights
 
-![Ride Count by Day](images/ride_count_by_day.png)
+![Ride Count by Day](images/members_casuals.jpg)
 
 Annual members demonstrate strong weekday usage, indicating commuter behavior.
 
