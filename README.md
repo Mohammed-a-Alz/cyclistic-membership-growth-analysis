@@ -76,7 +76,7 @@ This segmentation framework helped identify riders with the highest conversion p
 
 ### Members Ride for Commuting, Casuals Ride for Leisure
 
-<img src="images/membervscasuals.png" width="900">
+![Rides by Hour of Day](images/membervscasuals1.png)
 
 Annual members demonstrate strong weekday usage patterns consistent with commuter behavior.
 
@@ -88,7 +88,7 @@ Casual rides are significantly longer on average, reinforcing the behavioral dis
 
 ### Members Follow a Classic Commuter Pattern
 
-![Rides by Hour of Day](images/Rides_hour_of_day.png)
+![Rides by Hour of Day](images/Rides_hour_of_day1.png)
 
 Members exhibit pronounced peaks during traditional commute hours (morning and evening).
 
@@ -100,7 +100,7 @@ A subset of casual riders demonstrates repeat ride patterns that align with the 
 
 These behavioral differences reveal clear segmentation and defined conversion opportunities.
 
-![Behavioral Insight](images/Insight.png)
+![Behavioral Insight](images/Insight1.png)
 
 ---
 
