@@ -1,97 +1,88 @@
 # 🚴 Cyclistic Bike-Share Analysis
-### How Do Casual Riders & Annual Members Use Cyclistic Differently?
+### Converting Casual Riders into Annual Members Using Behavioral Data
 
 ---
 
-## 1. Executive Summary
+## Executive Summary
 
-Cyclistic is a Chicago-based bike-share company with 5,800+ bicycles across 692 stations. The marketing director believes the company's future growth depends on converting casual riders into annual members, as members are significantly more profitable.
+Cyclistic's marketing director believes the company's future growth depends on converting casual riders into annual members — a segment finance analysts have confirmed is significantly more profitable. Using 12 months of trip data, I analyzed how casual riders and annual members use Cyclistic differently across ride timing, day of week, and ride duration.
 
-This analysis examines 12 months of Cyclistic trip data to identify behavioral differences between casual riders and annual members. Three clear patterns emerged — differences in day of week, time of day, and ride length — each pointing to the same conclusion: **casual riders ride for leisure, members ride with purpose.** These insights directly inform three targeted marketing recommendations to drive membership conversion.
+The analysis revealed one consistent story: **members ride with purpose, casual riders ride for pleasure.** Members show classic commute patterns — weekday dominance and rush hour spikes — while casuals cluster on weekends and afternoons. Casual riders also take rides nearly twice as long as members, meaning they pay more per minute on a pay-per-use plan than they would on a membership.
+
+Based on these findings, I recommend the marketing team targets casual riders with a weekend conversion campaign, a weekday commute trial, and time-targeted digital ads — each directly tied to a behavioral insight from the data.
 
 ---
 
-## 2. Business Problem
+## Business Problem
 
 > *"How do annual members and casual riders use Cyclistic bikes differently?"*
 
-Cyclistic offers three pricing tiers: single-ride passes, full-day passes, and annual memberships. Customers on passes are classified as **casual riders**; subscription customers are **members**.
+Cyclistic offers three pricing tiers: single-ride passes, full-day passes, and annual memberships. Customers on passes are **casual riders**; subscription customers are **members**.
 
-Finance analysis has confirmed that annual members generate significantly more revenue than casual riders. Rather than targeting entirely new customers, the marketing director sees an opportunity to convert existing casual riders — people who already know and use the product — into paying members.
-
-The challenge: understand what separates casual rider behavior from member behavior, and use those insights to design a conversion strategy.
+Rather than targeting entirely new customers, the marketing director sees a more efficient opportunity: convert existing casual riders who already know and use the product. The business question driving this analysis is understanding *what* separates casual rider behavior from member behavior — and using that gap to design a targeted conversion strategy.
 
 ---
 
-## 3. Methodology
+## Methodology
 
 The analysis followed the six-phase data analysis process: **Ask → Prepare → Process → Analyze → Share → Act**
 
-**Data Source**
-12 months of Cyclistic historical trip data (made available by Motivate International Inc. under public license). Each record contains ride start/end time, station information, bike type, and rider type (casual vs member).
-
-**Tools Used**
+**Data Source:** 12 months of Cyclistic historical trip data made available by Motivate International Inc. under public license. Each record contains ride start/end timestamps, station information, bike type, and rider classification (casual vs member).
 
 | Tool | Purpose |
 |------|---------|
-| Excel | Initial data exploration on a single month subset — verified column structure, created `ride_length` and `day_of_week` columns |
-| Python (pandas) | Cleaned and combined all 12 monthly CSV files into a single dataframe, removed invalid rides, engineered features |
-| SQL | Queried the cleaned dataset to generate aggregated summary statistics by rider type |
-| Tableau | Built final polished visualizations for stakeholder presentation |
+| **Excel** | Single-month exploration — verified structure, created `ride_length` and `day_of_week` columns, built initial pivot tables |
+| **Python (pandas)** | Combined all 12 CSVs, cleaned data, engineered features (`hour`, `season`, `ride_length_mins`), produced EDA visualizations |
+| **SQL** | Queried cleaned dataset for aggregated summary statistics by rider type and time dimension |
+| **Tableau** | Built final polished dashboard for stakeholder presentation |
 
-**Data Cleaning Steps (Python)**
-- Converted `started_at` and `ended_at` to datetime
-- Calculated `ride_length` in minutes
-- Removed rides under 1 minute (false starts) and over 1,440 minutes (24 hours)
-- Extracted `hour`, `day_of_week`, `month`, and `season` columns
-- Removed null values in key columns
+**Cleaning steps included** removing rides under 1 minute (false starts), rides over 24 hours (data errors), and null values in key columns.
 
 ---
 
-## 4. Skills
+## Skills
 
-- **Python** — pandas, matplotlib, seaborn (data cleaning, EDA, visualization)
-- **SQL** — aggregations, GROUP BY, filtering, summary statistics
-- **Excel** — pivot tables, calculated columns, data familiarization
-- **Tableau** — interactive dashboard design
-- **Data Storytelling** — translating findings into actionable business recommendations
-- **Critical Thinking** — hypothesis formation before analysis, filtering insights by business relevance
+**Python** — pandas, matplotlib, seaborn, feature engineering, EDA  
+**SQL** — CTEs, GROUP BY, aggregate functions, filtering  
+**Excel** — pivot tables, calculated columns, data familiarization  
+**Tableau** — dashboard design, interactive filtering, data visualization  
+**Data Storytelling** — hypothesis-driven analysis, translating findings into business recommendations
 
 ---
 
-## 5. Results & Business Recommendations
+## Results & Business Recommendations
 
-### Finding 1 — Casual Riders Peak on Weekends, Members on Weekdays
-Members ride consistently Monday through Friday, indicating commute-driven behavior. Casual riders spike on Saturday and Sunday, revealing leisure-driven usage. The gap between these two patterns is the core conversion opportunity.
+### Finding 1 — Weekend vs Weekday Split
+Members ride consistently Monday through Friday. Casual riders spike sharply on Saturday and Sunday. This single pattern confirms the core behavioral divide: members use Cyclistic as a commute tool, casuals use it as a leisure activity.
 
-### Finding 2 — Members Show Commute Spikes, Casuals Build Gradually
-Members show two sharp peaks at 8am and 5pm — classic rush hour commute patterns. Casual riders build slowly through the day with a single afternoon peak and no morning spike. This confirms members treat Cyclistic as a utility while casuals treat it as entertainment.
+### Finding 2 — Commute Spikes vs Afternoon Leisure
+Members show two sharp peaks at 8am and 5pm — textbook rush hour commuting. Casual riders build gradually through the day with one afternoon peak and no morning spike. Members ride on a schedule; casuals ride when they feel like it.
 
-### Finding 3 — Casual Riders Take Longer Rides
-Casual riders average **23.51 minutes** per ride compared to **12.57 minutes** for members — nearly double. Since casuals pay per ride, they are effectively paying more per minute than members would. This creates a compelling cost-savings argument for membership.
+### Finding 3 — Casual Riders Take Nearly Twice as Long Per Ride
+Casual riders average **23.51 minutes** per ride vs **12.57 minutes** for members. Since casuals pay per ride, they are spending more per minute than a member would on an annual plan. This is the strongest cost-savings argument for conversion.
 
 ---
 
 ### 📌 Recommendations
 
-**1. Weekend Conversion Campaign**
-Target casual riders in real time on Saturdays and Sundays with station-level messaging showing a personalized cost comparison — *"You rode X times this month. A membership would have saved you $Y."* Strike while they are already engaged.
+**1. Weekend Conversion Campaign**  
+Target casual riders at stations on Saturdays and Sundays with real-time messaging showing a personalized cost comparison — *"You've taken X rides this month. A membership would have saved you $Y."* Hit them while they're already on the platform and engaged.
 
-**2. Commute Trial Campaign**
-Challenge casual riders to try Cyclistic once on a weekday commute. Experiencing the product as a daily utility — rather than a weekend leisure activity — is the fastest way to shift their perception and lower the commitment barrier to membership.
+**2. Weekday Commute Trial**  
+Challenge casual riders to try Cyclistic on one weekday commute. Experiencing the product as a daily utility — not just a weekend activity — is the fastest way to shift their perception and lower the psychological barrier to committing to a membership.
 
-**3. Afternoon Digital Ad Targeting**
-Casual riders are most active between 2–6pm, clustering near parks, waterfronts, and tourist areas. Target digital ads to those specific stations and time windows rather than running city-wide campaigns. Precision over volume.
+**3. Afternoon Digital Ad Targeting**  
+Casual riders peak between 2–6pm and cluster near parks, waterfronts, and tourist areas. Target digital ads to those specific stations and time windows rather than broad city-wide campaigns. Precision beats volume for a conversion audience.
 
 ---
 
-## 6. Next Steps
+## Next Steps
 
-- **Enrich the dataset** with weather data to quantify how temperature affects casual vs member ridership differently
-- **Station-level analysis** to identify the top casual rider hotspots for targeted physical promotions
-- **Cost modeling** — calculate actual savings per casual rider profile to personalize the membership pitch
-- **A/B test** the weekend conversion campaign messaging before full rollout
-- **Build a Tableau Public dashboard** for interactive stakeholder exploration of the findings
+- **A/B test** weekend campaign messaging variations before full rollout
+- **Station-level analysis** to map the top casual rider hotspots for targeted physical and digital promotions
+- **Weather data enrichment** to quantify how seasonality affects casual vs member retention differently
+- **Cost savings calculator** — model personalized membership savings per rider profile to sharpen the conversion pitch
+- **Track campaign performance** — measure email open rates, click-through rates, and conversion lift post-campaign
 
 ---
 
@@ -108,7 +99,7 @@ cyclistic-bike-share-analysis/
 │   └── cyclistic_eda.ipynb   # Full Python analysis notebook
 │
 ├── sql/
-│   └── cyclistic_queries.sql # Summary queries
+│   └── cyclistic_queries.sql # Aggregation queries
 │
 ├── visualizations/
 │   ├── rides_by_hour_of_day.png
@@ -123,4 +114,4 @@ cyclistic-bike-share-analysis/
 
 ---
 
-*Data made available by Motivate International Inc. under public license. This is a capstone project completed as part of the Google Data Analytics Professional Certificate.*
+*Data made available by Motivate International Inc. under public license. Completed as part of the Google Data Analytics Professional Certificate.*
