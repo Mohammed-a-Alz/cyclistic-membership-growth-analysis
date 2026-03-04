@@ -59,7 +59,7 @@ A subset of casual riders shows repeat ride frequency patterns that align with m
 
 These differences suggest clear behavioral segmentation and defined conversion targets.
 
-![Screenshot 2024-05-25 at 2 04 48 PM](https://github.com/jessramosdata/Product-Funnel-SaaS-FinTech/assets/59672972/d8cbde85-be7e-4c16-a132-02a63e357b1d)
+
 
 ## Recommendation
 
