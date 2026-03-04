@@ -47,7 +47,8 @@ Riders were behaviorally segmented to distinguish:
 
 ## Insights
 
-![Ride Count by Day](images/members_casuals.jpg)
+### Members Ride for Commuting, Casuals Ride for Leisure
+![](images/membervscasuals.png)
 
 Annual members demonstrate strong weekday usage, indicating commuter behavior.
 
@@ -55,11 +56,17 @@ Casual riders exhibit higher weekend concentration and seasonal spikes.
 
 Casual riders have longer average ride durations, consistent with leisure usage.
 
+### Members Follow a Classic Commuter Pattern
+![](images/Rides_hour_of_day.png)
+
+
+
+
 A subset of casual riders shows repeat ride frequency patterns that align with membership value economics.
 
 These differences suggest clear behavioral segmentation and defined conversion targets.
 
-
+![](images/insight.png)
 
 ## Recommendation
 
