@@ -10,31 +10,16 @@ Cyclistic is a chicago based bike-share company, operating with a fleet of thous
 3. Better client relationships
 
 
-### Business Problem: 
+## Business Problem: 
 
 Cyclistic believes future growth lies maximizing the number of annual members. Rather than targeting new customers, the company aims to transform casual members (single-ride passes) to members (annual paid) will yield the most future growth.
 
-![Screenshot 2024-05-25 at 2 05 24 PM](https://github.com/jessramosdata/Product-Funnel-SaaS-FinTech/assets/59672972/be7317e4-175b-4442-8091-8c4fb99854ac)
 
 
 
-### Methodology: 
+## Methodology: 
 
-#### Data Preparation
-Combined and validated trip-level datasets.
-Removed unrealistic ride duration values.
-Engineered features: Ride length, Day of week, Hour of day
-
-#### Segmentation
-
-Riders were behaviorally segmented to distinguish:
-
-1. Commuter-oriented riders
-
-2. Leisure-focused riders
-
-
-### Skills:
+### Skills
 
 Excel: Data inspection,  
 
@@ -43,7 +28,26 @@ SQL: CTEs, Joins, Case, aggregate functions
 Python: Pandas, Matplotlib, Numpy, 
 
 
-### Insights
+### Data Preparation
+1. Combined and validated trip-level datasets.
+2. Removed unrealistic ride duration values.
+3. Engineered features: Ride length, Day of week, Hour of day
+
+### Segmentation
+
+Riders were behaviorally segmented to distinguish:
+
+1. Commuter-oriented riders
+
+2. Leisure-focused riders
+
+
+
+
+
+## Insights
+
+![Ride Count by Day](images/ride_count_by_day.png)
 
 Annual members demonstrate strong weekday usage, indicating commuter behavior.
 
@@ -57,7 +61,7 @@ These differences suggest clear behavioral segmentation and defined conversion t
 
 ![Screenshot 2024-05-25 at 2 04 48 PM](https://github.com/jessramosdata/Product-Funnel-SaaS-FinTech/assets/59672972/d8cbde85-be7e-4c16-a132-02a63e357b1d)
 
-### Recommendation
+## Recommendation
 
 Based on behavioral insights, the highest-impact growth opportunities include:
 
