@@ -20,18 +20,19 @@ Cyclistic believes future growth lies maximizing the number of annual members. R
 
 ### Methodology: 
 
-# Data Preparation
-Combined and validated trip-level datasets
-Removed unrealistic ride duration values
-Engineered features:
+#### Data Preparation
+Combined and validated trip-level datasets.
+Removed unrealistic ride duration values.
+Engineered features: Ride length, Day of week, Hour of day
 
-Ride length
+#### Segmentation
 
-Day of week
+Riders were behaviorally segmented to distinguish:
 
-Hour of day
+1. Commuter-oriented riders
 
-Month / seasonal indicators
+2. Leisure-focused riders
+
 
 ### Skills:
 
