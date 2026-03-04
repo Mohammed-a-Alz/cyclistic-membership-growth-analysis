@@ -1,89 +1,125 @@
-# Product Funnel Analysis for SaaS FinTech
+# Cyclistic Membership Growth Analysis
 
-## Executive Summary:
+## Executive Summary
 
-Cyclistic is a chicago based bike-share company, operating with a fleet of thousand of different type of bicycles.The company offers flexible service options through annual memberships and single ride passes.
+Cyclistic is a Chicago-based bike-share company operating a large fleet of bicycles and offering flexible ride options, including single-ride passes and annual memberships.
 
+The company’s long-term growth strategy focuses on increasing the number of annual members. Analysis of trip-level ride data reveals clear behavioral differences between annual members and casual riders. Members exhibit commuter-driven usage patterns, while casual riders demonstrate leisure-oriented behavior.
 
-1. Copy changes within the workflow
-2. Reminder emails/texts
-3. Better client relationships
+These differences highlight defined conversion opportunities among high-frequency casual riders and support a targeted membership redesign strategy.
 
+---
 
-## Business Problem: 
+## Business Problem
 
-Cyclistic believes future growth lies maximizing the number of annual members. Rather than targeting new customers, the company aims to transform casual members (single-ride passes) to members (annual paid) will yield the most future growth.
+Cyclistic believes future growth depends on maximizing annual memberships. Rather than focusing solely on acquiring new customers, the company aims to convert existing casual riders into annual members.
 
+The key question:
 
+**How can Cyclistic identify and target casual riders whose behavior aligns with the value of annual membership?**
 
+Understanding behavioral differences between rider segments is essential for designing effective conversion strategies.
 
-## Methodology: 
+---
+
+## Methodology
 
 ### Skills
 
-Excel: Data inspection,  
+**Excel**
+- Data inspection  
+- Pivot analysis  
+- Validation checks  
 
-SQL: CTEs, Joins, Case, aggregate functions
+**SQL**
+- CTEs  
+- Joins  
+- CASE statements  
+- Aggregate functions  
 
-Python: Pandas, Matplotlib, Numpy, 
+**Python**
+- Pandas (data cleaning & transformation)  
+- Feature engineering  
+- Data visualization (Matplotlib)  
+- Behavioral segmentation  
 
+---
 
 ### Data Preparation
-1. Combined and validated trip-level datasets.
-2. Removed unrealistic ride duration values.
-3. Engineered features: Ride length, Day of week, Hour of day
+
+1. Combined and validated trip-level datasets  
+2. Removed unrealistic or invalid ride duration values  
+3. Engineered analytical features:
+   - Ride length
+   - Day of week
+   - Hour of day
+
+---
 
 ### Segmentation
 
-Riders were behaviorally segmented to distinguish:
+Riders were behaviorally segmented into two primary groups:
 
-1. Commuter-oriented riders
+1. **Commuter-oriented riders**  
+   - Weekday ride concentration  
+   - Commute-hour usage patterns  
 
-2. Leisure-focused riders
+2. **Leisure-focused riders**  
+   - Weekend-heavy usage  
+   - Longer average ride durations  
 
+This segmentation framework helped identify riders with the highest conversion potential.
 
-
-
+---
 
 ## Insights
 
 ### Members Ride for Commuting, Casuals Ride for Leisure
-![](images/membervscasuals.png)
 
-Annual members demonstrate strong weekday usage, indicating commuter behavior.
+<img src="images/membervscasuals.png" width="900">
 
-Casual riders exhibit higher weekend concentration and seasonal spikes.
+Annual members demonstrate strong weekday usage patterns consistent with commuter behavior.
 
-Casual riders have longer average ride durations, consistent with leisure usage.
+Casual riders show increased weekend concentration and seasonal spikes, indicating leisure-oriented usage.
+
+Casual rides are significantly longer on average, reinforcing the behavioral distinction between rider segments.
+
+---
 
 ### Members Follow a Classic Commuter Pattern
-![](images/Rides_hour_of_day.png)
 
+![Rides by Hour of Day](images/Rides_hour_of_day.png)
 
+Members exhibit pronounced peaks during traditional commute hours (morning and evening).
 
+Casual riders display a gradual afternoon increase without sharp commute spikes.
 
-A subset of casual riders shows repeat ride frequency patterns that align with membership value economics.
+---
 
-These differences suggest clear behavioral segmentation and defined conversion targets.
+A subset of casual riders demonstrates repeat ride patterns that align with the economic value of annual membership.
 
-![](images/insight.png)
+These behavioral differences reveal clear segmentation and defined conversion opportunities.
+
+![Behavioral Insight](images/Insight.png)
+
+---
 
 ## Recommendation
 
 Based on behavioral insights, the highest-impact growth opportunities include:
 
-Targeting high-frequency casual riders with personalized membership incentives.
+- Targeting high-frequency casual riders with personalized membership incentives
+- Deploying seasonal campaigns during peak leisure months
+- Positioning membership messaging around cost efficiency for repeat weekday riders
+- Testing limited-time membership trials to reduce conversion friction
 
-Deploying seasonal campaigns during peak leisure months.
+Focusing on high-probability conversion segments will improve membership adoption efficiency compared to broad, untargeted marketing efforts.
 
-Positioning membership messaging around cost savings for repeat weekday riders.
+---
 
-Testing limited-time membership trials to reduce conversion friction.
+## Next Steps
 
-By focusing on high-potential segments rather than broad marketing efforts, Cyclistic can increase annual membership adoption while optimizing acquisition efficiency..
-
-### Next Steps: 
-
-1. AB Test copy within the workflow
-2. Train clients and users
-3. Measure email and text open & click rates
+- Conduct cohort analysis to track casual rider behavior over time
+- Implement A/B testing on targeted membership offers
+- Develop a predictive scoring model to identify conversion likelihood
+- Measure campaign performance and refine segmentation strategy
