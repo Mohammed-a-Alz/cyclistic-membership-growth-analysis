@@ -1,117 +1,77 @@
-# 🚴 Cyclistic Bike-Share Analysis
-### Converting Casual Riders into Annual Members Using Behavioral Data
+# Product Funnel Analysis for SaaS FinTech
 
----
+## Executive Summary:
 
-## Executive Summary
+Cyclistic is a chicago based bike-share company, operating with a fleet of thousand of different type of bicycles.The company offers flexible service options through annual memberships and single ride passes.
 
-Cyclistic's marketing director believes the company's future growth depends on converting casual riders into annual members — a segment finance analysts have confirmed is significantly more profitable. Using 12 months of trip data, I analyzed how casual riders and annual members use Cyclistic differently across ride timing, day of week, and ride duration.
 
-The analysis revealed one consistent story: **members ride with purpose, casual riders ride for pleasure.** Members show classic commute patterns — weekday dominance and rush hour spikes — while casuals cluster on weekends and afternoons. Casual riders also take rides nearly twice as long as members, meaning they pay more per minute on a pay-per-use plan than they would on a membership.
+1. Copy changes within the workflow
+2. Reminder emails/texts
+3. Better client relationships
 
-Based on these findings, I recommend the marketing team targets casual riders with a weekend conversion campaign, a weekday commute trial, and time-targeted digital ads — each directly tied to a behavioral insight from the data.
 
----
+### Business Problem: 
 
-## Business Problem
+Cyclistic believes future growth lies maximizing the number of annual members. Rather than targeting new customers, the company aims to transform casual members (single-ride passes) to members (annual paid) will yield the most future growth.
 
-> *"How do annual members and casual riders use Cyclistic bikes differently?"*
+![Screenshot 2024-05-25 at 2 05 24 PM](https://github.com/jessramosdata/Product-Funnel-SaaS-FinTech/assets/59672972/be7317e4-175b-4442-8091-8c4fb99854ac)
 
-Cyclistic offers three pricing tiers: single-ride passes, full-day passes, and annual memberships. Customers on passes are **casual riders**; subscription customers are **members**.
 
-Rather than targeting entirely new customers, the marketing director sees a more efficient opportunity: convert existing casual riders who already know and use the product. The business question driving this analysis is understanding *what* separates casual rider behavior from member behavior — and using that gap to design a targeted conversion strategy.
 
----
+### Methodology: 
 
-## Methodology
+# Data Preparation
+Combined and validated trip-level datasets
+Removed unrealistic ride duration values
+Engineered features:
 
-The analysis followed the six-phase data analysis process: **Ask → Prepare → Process → Analyze → Share → Act**
+Ride length
 
-**Data Source:** 12 months of Cyclistic historical trip data made available by Motivate International Inc. under public license. Each record contains ride start/end timestamps, station information, bike type, and rider classification (casual vs member).
+Day of week
 
-| Tool | Purpose |
-|------|---------|
-| **Excel** | Single-month exploration — verified structure, created `ride_length` and `day_of_week` columns, built initial pivot tables |
-| **Python (pandas)** | Combined all 12 CSVs, cleaned data, engineered features (`hour`, `season`, `ride_length_mins`), produced EDA visualizations |
-| **SQL** | Queried cleaned dataset for aggregated summary statistics by rider type and time dimension |
-| **Tableau** | Built final polished dashboard for stakeholder presentation |
+Hour of day
 
-**Cleaning steps included** removing rides under 1 minute (false starts), rides over 24 hours (data errors), and null values in key columns.
+Month / seasonal indicators
 
----
+### Skills:
 
-## Skills
+Excel: Data inspection,  
 
-**Python** — pandas, matplotlib, seaborn, feature engineering, EDA  
-**SQL** — CTEs, GROUP BY, aggregate functions, filtering  
-**Excel** — pivot tables, calculated columns, data familiarization  
-**Tableau** — dashboard design, interactive filtering, data visualization  
-**Data Storytelling** — hypothesis-driven analysis, translating findings into business recommendations
+SQL: CTEs, Joins, Case, aggregate functions
 
----
+Python: Pandas, Matplotlib, Numpy, 
 
-## Results & Business Recommendations
 
-### Finding 1 — Weekend vs Weekday Split
-Members ride consistently Monday through Friday. Casual riders spike sharply on Saturday and Sunday. This single pattern confirms the core behavioral divide: members use Cyclistic as a commute tool, casuals use it as a leisure activity.
+### Insights
 
-### Finding 2 — Commute Spikes vs Afternoon Leisure
-Members show two sharp peaks at 8am and 5pm — textbook rush hour commuting. Casual riders build gradually through the day with one afternoon peak and no morning spike. Members ride on a schedule; casuals ride when they feel like it.
+Annual members demonstrate strong weekday usage, indicating commuter behavior.
 
-### Finding 3 — Casual Riders Take Nearly Twice as Long Per Ride
-Casual riders average **23.51 minutes** per ride vs **12.57 minutes** for members. Since casuals pay per ride, they are spending more per minute than a member would on an annual plan. This is the strongest cost-savings argument for conversion.
+Casual riders exhibit higher weekend concentration and seasonal spikes.
 
----
+Casual riders have longer average ride durations, consistent with leisure usage.
 
-### 📌 Recommendations
+A subset of casual riders shows repeat ride frequency patterns that align with membership value economics.
 
-**1. Weekend Conversion Campaign**  
-Target casual riders at stations on Saturdays and Sundays with real-time messaging showing a personalized cost comparison — *"You've taken X rides this month. A membership would have saved you $Y."* Hit them while they're already on the platform and engaged.
+These differences suggest clear behavioral segmentation and defined conversion targets.
 
-**2. Weekday Commute Trial**  
-Challenge casual riders to try Cyclistic on one weekday commute. Experiencing the product as a daily utility — not just a weekend activity — is the fastest way to shift their perception and lower the psychological barrier to committing to a membership.
+![Screenshot 2024-05-25 at 2 04 48 PM](https://github.com/jessramosdata/Product-Funnel-SaaS-FinTech/assets/59672972/d8cbde85-be7e-4c16-a132-02a63e357b1d)
 
-**3. Afternoon Digital Ad Targeting**  
-Casual riders peak between 2–6pm and cluster near parks, waterfronts, and tourist areas. Target digital ads to those specific stations and time windows rather than broad city-wide campaigns. Precision beats volume for a conversion audience.
+### Recommendation
 
----
+Based on behavioral insights, the highest-impact growth opportunities include:
 
-## Next Steps
+Targeting high-frequency casual riders with personalized membership incentives.
 
-- **A/B test** weekend campaign messaging variations before full rollout
-- **Station-level analysis** to map the top casual rider hotspots for targeted physical and digital promotions
-- **Weather data enrichment** to quantify how seasonality affects casual vs member retention differently
-- **Cost savings calculator** — model personalized membership savings per rider profile to sharpen the conversion pitch
-- **Track campaign performance** — measure email open rates, click-through rates, and conversion lift post-campaign
+Deploying seasonal campaigns during peak leisure months.
 
----
+Positioning membership messaging around cost savings for repeat weekday riders.
 
-## 📁 Repository Structure
+Testing limited-time membership trials to reduce conversion friction.
 
-```
-cyclistic-bike-share-analysis/
-│
-├── data/
-│   ├── raw/                  # Original monthly CSV files
-│   └── cleaned/              # Cleaned combined dataset
-│
-├── notebooks/
-│   └── cyclistic_eda.ipynb   # Full Python analysis notebook
-│
-├── sql/
-│   └── cyclistic_queries.sql # Aggregation queries
-│
-├── visualizations/
-│   ├── rides_by_hour_of_day.png
-│   ├── ride_count_by_day.png
-│   └── avg_ride_length.png
-│
-├── presentation/
-│   └── Cyclistic_Analysis.pptx
-│
-└── README.md
-```
+By focusing on high-potential segments rather than broad marketing efforts, Cyclistic can increase annual membership adoption while optimizing acquisition efficiency..
 
----
+### Next Steps: 
 
-*Data made available by Motivate International Inc. under public license. Completed as part of the Google Data Analytics Professional Certificate.*
+1. AB Test copy within the workflow
+2. Train clients and users
+3. Measure email and text open & click rates
