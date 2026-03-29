@@ -1,3 +1,10 @@
+![SQL](https://img.shields.io/badge/SQL-BigQuery-blue)
+![Excel](https://img.shields.io/badge/Excel-green)
+![Python](https://img.shields.io/badge/Python-3.x-blue)
+![Pandas](https://img.shields.io/badge/Pandas-green)
+![Seaborn](https://img.shields.io/badge/Seaborn-orange)
+
+
 # Cyclistic Membership Growth Analysis
 
 ## Executive Summary
@@ -7,6 +14,21 @@ Cyclistic is a Chicago-based bike-share company operating a large fleet of bicyc
 The company’s long-term growth strategy focuses on increasing the number of annual members. Analysis of trip-level ride data reveals clear behavioral differences between annual members and casual riders. Members exhibit commuter-driven usage patterns, while casual riders demonstrate leisure-oriented behavior.
 
 These differences highlight defined conversion opportunities among high-frequency casual riders and support a targeted membership redesign strategy.
+
+**Key Findings:**
+- Casual riders have ~50% longer average ride durations than members
+- Members peak during commute hours; casuals peak on weekend afternoons
+- High-frequency casual riders with weekday usage patterns represent the highest conversion opportunity
+
+This analysis enables Cyclistic to focus on high-probability conversion segments, improving marketing efficiency and increasing membership adoption.
+
+---
+
+## Dataset
+Public trip data provided by Motivate International Inc. via the City of Chicago.
+Covers ride-level records including start/end times, station info, and rider type.
+
+[Download the data here](https://divvy-tripdata.s3.amazonaws.com/index.html)
 
 ---
 
@@ -40,8 +62,8 @@ Understanding behavioral differences between rider segments is essential for des
 **Python**
 - Pandas (data cleaning & transformation)  
 - Feature engineering  
-- Data visualization (Matplotlib)  
-- Behavioral analysis 
+- Data visualization (Matplotlib, Seaborn)  
+- Behavioral analysis
 
 ---
 
@@ -49,7 +71,7 @@ Understanding behavioral differences between rider segments is essential for des
 
 1. Combined and validated trip-level datasets  
 2. Removed unrealistic or invalid ride duration values  
-3. Engineered analytical features:
+3. Engineered analytical features:   
    - Ride length
    - Day of week
    - Hour of day
