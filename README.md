@@ -95,6 +95,7 @@ Members exhibit pronounced peaks during traditional commute hours (morning and e
 Casual riders display a gradual afternoon increase without sharp commute spikes.
 
 ---
+### Growth Requires Redesigning Membership Around Leisure Usage
 
 A subset of casual riders demonstrates repeat ride patterns that align with the economic value of annual membership.
 
