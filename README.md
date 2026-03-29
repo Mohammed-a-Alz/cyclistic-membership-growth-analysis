@@ -32,16 +32,16 @@ Understanding behavioral differences between rider segments is essential for des
 - Validation checks  
 
 **SQL**
-- CTEs  
-- Joins  
-- CASE statements  
+- BigQuery SQL 
 - Aggregate functions  
+- GROUP BY and ORDER BY  
+- Exploratory analysis by rider type, weekday, and month  
 
 **Python**
 - Pandas (data cleaning & transformation)  
 - Feature engineering  
 - Data visualization (Matplotlib)  
-- Behavioral segmentation  
+- Behavioral analysis 
 
 ---
 
@@ -107,20 +107,22 @@ These behavioral differences reveal clear segmentation and defined conversion op
 
 ## Recommendation
 
-Based on behavioral insights, the highest-impact growth opportunities include:
+Analysis indicates that a subset of casual riders demonstrates repeat usage patterns similar to annual members, particularly during weekdays and peak commuting hours.
 
-- Targeting high-frequency casual riders with personalized membership incentives
-- Deploying seasonal campaigns during peak leisure months
-- Positioning membership messaging around cost efficiency for repeat weekday riders
-- Testing limited-time membership trials to reduce conversion friction
+The highest-impact growth opportunities include:
 
-Focusing on high-probability conversion segments will improve membership adoption efficiency compared to broad, untargeted marketing efforts.
+- Targeting high-frequency casual riders who exhibit weekday riding behavior with personalized membership offers
+- Launching seasonal campaigns during peak summer and weekend periods to capture leisure-driven demand
+- Positioning membership value around cost savings for riders with recurring usage patterns
+- Introducing limited-time trial memberships to reduce conversion friction among frequent casual users
+
+Focusing on behavior-based targeting rather than broad acquisition will improve conversion efficiency and increase membership adoption.
 
 ---
 
 ## Next Steps
 
-- Conduct cohort analysis to track casual rider behavior over time
-- Implement A/B testing on targeted membership offers
-- Develop a predictive scoring model to identify conversion likelihood
-- Measure campaign performance and refine segmentation strategy
+- Define high-frequency casual rider criteria based on ride count, duration, and weekday usage patterns
+- Track rider cohorts over time to identify consistent usage behavior and conversion readiness
+- Test targeted membership offers on identified segments and measure conversion rates
+- Monitor performance of campaigns and refine targeting strategy based on observed behavior
