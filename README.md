@@ -24,6 +24,14 @@ This analysis enables Cyclistic to focus on high-probability conversion segments
 
 ---
 
+## 📊 Dashboard Preview
+
+This dashboard visualizes key behavioral differences between annual members and casual riders, highlighting ride patterns, usage trends, and segmentation insights.
+
+![Dashboard Overview](images/dashboard_all.png)
+
+---
+
 ## Dataset
 Public trip data provided by Motivate International Inc. via the City of Chicago.
 Covers ride-level records including start/end times, station info, and rider type.
