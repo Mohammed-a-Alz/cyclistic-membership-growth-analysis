@@ -26,9 +26,28 @@ This analysis enables Cyclistic to focus on high-probability conversion segments
 
 ## 📊 Dashboard Preview
 
-This dashboard visualizes key behavioral differences between annual members and casual riders, highlighting ride patterns, usage trends, and segmentation insights.
+An interactive Power BI dashboard built to explore behavioral differences 
+between annual members and casual riders across time, weekday, and ride duration.
 
+**Filters:** Day and Month slicers allow dynamic exploration of rider patterns.
+
+**Visuals include:**
+- **Ride Trends Over Time** — hourly ride volume comparing members vs. casuals
+- **Rides by Day of Week** — weekday vs. weekend usage breakdown
+- **Member vs. Casual Split** — pie chart showing overall ride share
+- **Avg Ride Length** — side-by-side comparison of average duration by rider type
+
+
+
+
+
+### Overview (All Data)
 ![Dashboard Overview](images/dashboard_all.png)
+
+### Filtered View (Example: Monday in February)
+![Filtered Dashboard](images/dashboard_feb_mon.png)
+> 🔍 Example: Filtering to **Monday, February** reveals members dominate weekday 
+> rides, while casuals show significantly longer average ride lengths (13.9 vs 9.8 min).
 
 ---
 
