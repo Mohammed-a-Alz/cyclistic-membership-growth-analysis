@@ -148,4 +148,4 @@ Focusing on **behavior-based targeting rather than broad acquisition** will impr
 
 ---
 
-*Author: Mohammed Alzahrani | [LinkedIn](https://linkedin.com/in/mohammedalz-) | [GitHub](https://github.com/Mohammed-a-Alz)*
+*Author: Mohammed Alzahrani | [LinkedIn](https://linkedin.com/in/mohammedalz-)*
