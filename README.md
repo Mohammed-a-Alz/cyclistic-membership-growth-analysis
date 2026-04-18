@@ -9,6 +9,8 @@
 
 **Bike-share customer behavior analysis across 5.5M trip records to identify membership conversion opportunities.**
 
+📄 [View Full Presentation](cyclistic_membership_growth_analysis.pdf)
+
 ---
 
 ## Executive Summary
